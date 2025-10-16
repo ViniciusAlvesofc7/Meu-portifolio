@@ -40,7 +40,8 @@ body {
 
 html {
     scrollbar-width: auto;
-    scrollbar-color: #348E91 #0A0C0D;
+    scrollbar-color: #348E91 #0A0C0D; 
+    overflow-x: hidden;
 }
 
 // Site
@@ -235,11 +236,12 @@ main {
             justify-content: center;
             align-items: center;
             gap: 20px;
+            text-align: center;
 
             h2 {
                 color: $cor-destaque-inverso;
                 text-shadow: 1px 1px 4px $cor-elementos;
-                font-size: 2em;
+                font-size: 1.8em;
                 margin-bottom: 50px;
             }
 
