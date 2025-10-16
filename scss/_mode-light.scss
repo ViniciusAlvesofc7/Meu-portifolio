@@ -1,0 +1,154 @@
+// Variaveis
+$cor-principal: #e7e5e5;
+$cor-principal-escura: #0A0C0D;
+$cor-texto: #FFFFFF;
+$cor-texto-inverso: #000;
+$cor-elementos: #111717;
+$cor-destaque: #1C5052;
+$cor-destaque-inverso: #348E91;
+$cor-destaque-escura: #213635;
+
+// Alterando Site
+.mode-light {
+    background-color: $cor-principal;
+
+    header {
+        background-color: $cor-principal;
+        border-bottom: 2px solid $cor-texto-inverso;
+
+        section#header {
+            h1 {
+                color: $cor-texto-inverso;
+                text-shadow: 1px 1px 4px $cor-principal;
+            }
+
+            .menu {
+                color: $cor-texto-inverso;
+            }
+
+            .menu-close {
+                color: $cor-texto-inverso;
+            }
+
+        }
+    }
+
+    main {
+        #fade-menu {
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            animation: fade-menu-light 1s 1;
+        }
+
+        @keyframes fade-menu-light {
+            from {
+                background-color: rgba(255, 255, 255, 0);
+                backdrop-filter: blur(0px);
+            }
+
+            to {
+                background-color: rgba(255, 255, 255, 0.4);
+                backdrop-filter: blur(10px);
+            }
+        }
+
+        #modal-menu {
+            #nav-menu {
+                h2 {
+                    text-shadow: 1px 1px 4px $cor-destaque-escura;
+                }
+
+                a {
+                    color: $cor-texto-inverso;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        section#ficha {
+            #sobre {
+                h1 {
+                    color: $cor-texto-inverso;
+                }
+
+                span {
+                    color: $cor-elementos;
+                }
+
+                #button-cv {
+                    #btn-cv-2 {
+                        background-color: $cor-principal;
+
+                        a {
+                            color: $cor-destaque-inverso;
+                        }
+
+                        &:hover {
+                            a {
+                                color: $cor-texto;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #sobre-descricao{
+                h3 {
+                    color: $cor-texto-inverso;
+                }
+
+                p {
+                    color: $cor-texto-inverso;
+                }
+
+                #seta-sobre {
+                    color: $cor-destaque-escura;
+                }
+            }
+        }
+
+        section#skills {
+            h2 {
+                color: $cor-texto-inverso;
+            }
+            #skills-group {
+                .skill-icon{
+                    p{
+                        color: $cor-principal;
+                    }
+
+                    i{
+                        color: $cor-principal;
+                    }
+                }
+            }
+        }
+
+        section#projetos{
+            h2{
+                color: $cor-texto-inverso;
+            }
+        }
+
+        section#contato {
+            h2{
+                color: $cor-texto-inverso;
+            }
+
+            #contato-group{
+                .contato-single {
+                    .contato-icon{
+                        i{
+                            color: $cor-principal;
+                        }
+                    }
+
+                    h3, p{
+                        color: $cor-texto-inverso;
+                    }
+                }
+            }
+        }
+
+    }
+}

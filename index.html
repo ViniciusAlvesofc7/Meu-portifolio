@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicius Alves - Portifólio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <section id="header">
+            <i class="fa-solid fa-bars menu" ></i>
+            <i class="fa-solid fa-xmark menu-close"></i>
+
+            <h1>Portifólio</h1>
+
+            <div class="light">
+                <div class="light-button"></div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div id="fade-menu"></div>
+        <div id="modal-menu">
+            <nav id="nav-menu">
+                <h2>Bem-vindo ao meu Portifólio <i class="fa-solid fa-code"></i></h2>
+
+                <a href="#ficha">Sobre</a>
+                <a href="#skills">Skills</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+
+        <section id="ficha" >
+            <div id="sobre">
+                <img class="avatar" src="image/Avatar Vinicius.png" alt="Avatar- Vinicius">
+                <div id="sobre-name">
+                    <h1>Olá, eu sou o <br> <b>Vinicius Alves</b></h1>
+                    <span> Desenvolverdor Front-End | JavaScript</span>
+                    <div id="button-cv">
+                        <button id="btn-cv-1" onclick="curriculo()">Download CV</button>
+                        <button id="btn-cv-2"> <a href="#contato">Entrar em contato</a></button>
+                    </div>
+                </div>
+            </div><!-- Sobre -->
+            
+            <div id="sobre-descricao">
+                <h3>Sobre mim</h3>
+                <p>Estudante de Análise e Desenvolvimento de Sistemas, com foco em Desenvolvimento Web e interesse crescente por tecnologia e inovação. Busco evoluir constantemente como desenvolvedor, explorando novas ferramentas e boas práticas de programação. Atualmente, dedico meu tempo a criar projetos próprios e aprimorar minhas habilidades em front-end, com o objetivo de construir uma carreira sólida na área e contribuir com soluções úteis e bem desenvolvidas.</p>
+
+                <div id="seta-sobre">
+                    <i class="fa-solid fa-angles-right"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="hidden">
+            <h2 id="skills-name">Habilidades</h2>
+
+            <div id="skills-group">
+                <div class="skill-icon">
+                    <p>HTML5</p>
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="skill-icon">
+                    <p>CSS3</p>
+                    <i class="fab fa-css3"></i>
+                </div>
+                <div class="skill-icon">
+                    <p>JavaScript</p>
+                    <i class="fab fa-js"></i>
+                </div>
+                <div class="skill-icon">
+                    <p>SASS</p>
+                    <i class="fab fa-sass"></i>
+                </div>
+                <!-- <div class="skill-icon">
+                    <p>React.js</p>
+                    <i class="fab fa-react"></i>
+                </div> -->
+                <div class="skill-icon">
+                    <p>Bootstrap</p>
+                    <i class="fab fa-bootstrap"></i>
+                </div>
+                <!-- <div class="skill-icon">
+                    <p>Wordpress</p>
+                    <i class="fab fa-wordpress"></i>
+                </div> -->
+                <!-- <div class="skill-icon">
+                    <p>Java</p>
+                    <i class="fa-brands fa-java"></i>
+                </div> -->
+            </div>
+        </section>
+
+        <section id="projetos" class="hidden right">
+            <h2>Projetos</h2>
+
+            <div id="projeto-group">
+                <div class="projeto-single">
+                    <div class="projeto-image" style="background-image: url('../image/projeto-clinica.png');">
+                        <div class="projeto-overley">
+                            <p>Clínica Odontologica</p>
+                            <div class="projeto-icons">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-sass"></i>                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto-descricao">
+                        <h3>20 de setembro de 2025</h3>
+                        <button>Ver mais</button>
+                    </div>
+                </div><!-- Projeto-single -->
+                
+                <div class="projeto-single">
+                    <div class="projeto-image" style="background-image: url('image/projeto-cronometro.png');">
+                        <div class="projeto-overley">
+                            <p>Projeto Cronômetro</p>
+                            <div class="projeto-icons">
+                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fab fa-sass"></i>                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projeto-descricao">
+                        <h3>20 de setembro de 2025</h3>
+                        <button>Ver mais</button>
+                    </div>
+                </div><!-- Projeto-single -->
+                
+            </div>
+        </section>
+
+        <section id="contato" class="hidden">
+            <h2>Contatos</h2>
+            
+            <div id="contato-group">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=viniciusalvesofc7@gmail.com&su=Assunto&body=Mensagem" target="_blank">
+                    <div class="contato-single">
+                        <div class="contato-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <h3>E-mail</h3>
+                        <p>viniciusalvesofc7@gmail.com</p>
+                    </div>
+                </a>
+                <a href="https://w.app/clamz3" target="_blank">
+                    <div class="contato-single">
+                        <div class="contato-icon">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h3>Telefone</h3>
+                        <p>(81) 9 9639-2245</p>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/vinicius-alves-673a39270/" target="_blank">
+                    <div class="contato-single">
+                        <div class="contato-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <h3>Linkedin</h3>
+                        <p>Vinicius Alves</p>
+                    </div>
+                </a>
+                <a href="https://github.com/ViniciusAlvesofc7" target="_blank">
+                    <div class="contato-single">
+                        <div class="contato-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <h3>Github</h3>
+                        <p>@ViniciusAlvesofc7</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+<footer></footer>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
