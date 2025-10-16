@@ -540,6 +540,9 @@ main section#projetos #projeto-group .projeto-single .projeto-descricao h3 {
   color: #FFFFFF;
   font-size: 1em;
 }
+main section#projetos #projeto-group .projeto-single .projeto-descricao a {
+  text-decoration: none;
+}
 main section#projetos #projeto-group .projeto-single .projeto-descricao button {
   all: unset;
   padding: 10px 15px;
