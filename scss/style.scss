@@ -297,10 +297,23 @@ main {
                 padding-top: 30px;
 
                 b {
-                    color: $cor-destaque-inverso;
+                    background: linear-gradient(45deg, $cor-destaque-inverso,$cor-destaque-escura,$cor-destaque-inverso);
+                    background-size: 400% 100%;
+                    animation: degrade-nome 10s linear infinite;
+
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
-
+@keyframes degrade-nome {
+    0%{
+        background-position-x: 0%;
+    }
+    
+    100%{
+        background-position-x: 400%;
+    }
+}
             span {
                 color: $cor-principal;
                 font-size: 0.8em;
@@ -410,6 +423,10 @@ main {
         h2 {
             color: $cor-texto;
             text-align: center;
+            margin: auto;
+            width: 150px;
+            line-height: 1.6em;
+            border-bottom: 2px solid $cor-destaque-inverso;
             margin-bottom: 50px;
         }
 
@@ -457,6 +474,10 @@ main {
         h2 {
             color: $cor-texto;
             text-align: center;
+            margin: auto;
+            width: 150px;
+            line-height: 1.6em;
+            border-bottom: 2px solid $cor-destaque-inverso;
             margin-bottom: 50px;
         }
 
@@ -572,6 +593,10 @@ main {
         h2 {
             color: $cor-texto;
             text-align: center;
+            margin: auto;
+            width: 150px;
+            line-height: 1.6em;
+            border-bottom: 2px solid $cor-destaque-inverso;
             margin-bottom: 50px;
         }
 

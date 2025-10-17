@@ -343,7 +343,19 @@ main section#ficha #sobre h1 {
   padding-top: 30px;
 }
 main section#ficha #sobre h1 b {
-  color: #348E91;
+  background: linear-gradient(45deg, #348E91, #213635, #348E91);
+  background-size: 400% 100%;
+  animation: degrade-nome 10s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes degrade-nome {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 400%;
+  }
 }
 main section#ficha #sobre span {
   color: #e7e5e5;
@@ -435,6 +447,10 @@ main section#skills {
 main section#skills h2 {
   color: #FFFFFF;
   text-align: center;
+  margin: auto;
+  width: 150px;
+  line-height: 1.6em;
+  border-bottom: 2px solid #348E91;
   margin-bottom: 50px;
 }
 main section#skills #skills-group {
@@ -474,6 +490,10 @@ main section#projetos {
 main section#projetos h2 {
   color: #FFFFFF;
   text-align: center;
+  margin: auto;
+  width: 150px;
+  line-height: 1.6em;
+  border-bottom: 2px solid #348E91;
   margin-bottom: 50px;
 }
 main section#projetos #projeto-group {
@@ -574,6 +594,10 @@ main section#contato {
 main section#contato h2 {
   color: #FFFFFF;
   text-align: center;
+  margin: auto;
+  width: 150px;
+  line-height: 1.6em;
+  border-bottom: 2px solid #348E91;
   margin-bottom: 50px;
 }
 main section#contato #contato-group {
