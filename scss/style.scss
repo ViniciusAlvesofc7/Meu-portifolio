@@ -553,6 +553,7 @@ main {
                     padding: 20px 10px;
                     background-color: $cor-elementos;
                     border-radius: 0 0 20px 20px; 
+                    z-index: 2;
 
                     h3 {
                         color: $cor-texto;
@@ -568,7 +569,8 @@ main {
                         border: 2px solid $cor-destaque-inverso;
                         transition: 0.6s;
                         cursor: pointer;
-                        display: inline;
+                        display: inline-block;
+                        z-index: 3;
 
                         &:hover,
                         &:focus,
@@ -667,7 +669,7 @@ main {
             }
         }
     }
-}
+
 
 @media screen and (min-width: 767px) {
     section#ficha {

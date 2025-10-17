@@ -103,22 +103,21 @@ items.reverse().forEach(item => container.appendChild(item));
 // })
 
 document.querySelectorAll('.projeto-single').forEach(projeto => {
-    const botao = projeto.querySelector('a'); // link "Ver mais"
+    const botao = projeto.querySelector('a');
+    const descricao = projeto.querySelector('.projeto-descricao');
 
-    const toggleDescricao = () => projeto.classList.toggle('ativo');
-    const fecharDescricao = () => projeto.classList.remove('ativo');
-
-    // Desktop: hover/focus funciona pelo CSS
-    // Mobile: alterna toque no card
     projeto.addEventListener('click', e => {
-        if (e.target === botao) return; // deixa o link abrir normalmente
-        toggleDescricao();
+        // Evita que o link feche a descrição
+        if (botao.contains(e.target)) return;
+
+        // Alterna o estado
+        projeto.classList.toggle('ativo');
     });
 
-    // Fecha se clicar fora
+    // Fecha descrição se clicar fora
     document.addEventListener('click', e => {
         if (!projeto.contains(e.target)) {
-            fecharDescricao();
+            projeto.classList.remove('ativo');
         }
     });
 });
