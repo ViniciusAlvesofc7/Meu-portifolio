@@ -581,9 +581,12 @@ main section#projetos #projeto-group .projeto-single .projeto-descricao a:hover,
   background-color: #348E91;
   text-shadow: 1px 1px 1px #213635;
 }
-main section#projetos #projeto-group .projeto-single:focus-within .projeto-descricao {
-  opacity: 1;
+main section#projetos #projeto-group .projeto-single:hover .projeto-overley, main section#projetos #projeto-group .projeto-single:focus-within .projeto-overley {
+  opacity: 0;
+}
+main section#projetos #projeto-group .projeto-single:hover .projeto-descricao, main section#projetos #projeto-group .projeto-single:focus-within .projeto-descricao {
   display: flex;
+  opacity: 1;
 }
 main section#contato {
   grid-column: 2;

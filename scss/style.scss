@@ -578,10 +578,14 @@ main {
                     }
                 }
 
+                &:hover,
                 &:focus-within {
+                    .projeto-overley {
+                    opacity: 0;
+                    }
                     .projeto-descricao {
-                    opacity: 1;
                     display: flex;
+                    opacity: 1;
                     }
                 }
             }
