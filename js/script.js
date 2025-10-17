@@ -105,7 +105,7 @@ items.reverse().forEach(item => container.appendChild(item));
 document.querySelectorAll('.projeto-single').forEach(projeto => {
     const overley = projeto.querySelector('.projeto-overley');
     const projetoDescricao = projeto.querySelector('.projeto-descricao');
-    const botao = projeto.querySelector('a'); // ou button, depende do teu HTML
+    const botao = projeto.querySelector('a'); // link do "Ver mais"
 
     const mostrar = () => {
         overley.style.opacity = 0;
@@ -123,9 +123,9 @@ document.querySelectorAll('.projeto-single').forEach(projeto => {
     projeto.addEventListener('mouseenter', mostrar);
     projeto.addEventListener('mouseleave', esconder);
 
-    // Mobile
+    // Mobile: alterna toque
     projeto.addEventListener('touchstart', e => {
-        e.stopPropagation();
+        e.stopPropagation(); // evita fechar ao tocar no próprio projeto
         if (projetoDescricao.style.display === 'flex') {
             esconder();
         } else {
@@ -133,12 +133,12 @@ document.querySelectorAll('.projeto-single').forEach(projeto => {
         }
     });
 
-    // Impede o fechamento ao tocar no botão
+    // Não fecha se tocar no botão/link
     if (botao) {
         botao.addEventListener('touchstart', e => e.stopPropagation());
     }
 
-    // Fecha se tocar fora
+    // Fecha se tocar fora de qualquer projeto
     document.addEventListener('touchstart', e => {
         if (!projeto.contains(e.target)) {
             esconder();
