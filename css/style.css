@@ -583,6 +583,10 @@ main section#projetos #projeto-group .projeto-single .projeto-descricao button:h
   background-color: #348E91;
   text-shadow: 1px 1px 1px #213635;
 }
+main section#projetos #projeto-group .projeto-single:focus-within .projeto-descricao {
+  opacity: 1;
+  display: flex;
+}
 main section#contato {
   grid-column: 2;
   display: flex;

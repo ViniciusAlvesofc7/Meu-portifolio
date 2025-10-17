@@ -578,6 +578,13 @@ main {
                         }
                     }
                 }
+
+                &:focus-within {
+                    .projeto-descricao {
+                    opacity: 1;
+                    display: flex;
+                    }
+                }
             }
         }
     }

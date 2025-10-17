@@ -83,21 +83,60 @@ items.reverse().forEach(item => container.appendChild(item));
 
 
 // Ativa e desativa o overley em animação
-document.querySelectorAll('.projeto-single').forEach( projeto =>{
+// document.querySelectorAll('.projeto-single').forEach( projeto =>{
+//     const overley = projeto.querySelector('.projeto-overley');
+//     const projetoDescricao = projeto.querySelector('.projeto-descricao');
+
+
+//     projeto.addEventListener('mouseenter', () =>{
+//         overley.style.opacity = 0;
+//         projetoDescricao.style.opacity = 1;
+//         projetoDescricao.style.display = 'flex';
+//     })
+
+//     projeto.addEventListener('mouseleave', () =>{
+//         overley.style.opacity = 1;
+//         projetoDescricao.style.opacity = 0;
+//         projetoDescricao.style.display = 'none';
+//     })
+    
+// })
+
+document.querySelectorAll('.projeto-single').forEach(projeto => {
     const overley = projeto.querySelector('.projeto-overley');
     const projetoDescricao = projeto.querySelector('.projeto-descricao');
 
-
-    projeto.addEventListener('mouseenter', () =>{
+    const mostrar = () => {
         overley.style.opacity = 0;
         projetoDescricao.style.opacity = 1;
         projetoDescricao.style.display = 'flex';
-    })
+    };
 
-    projeto.addEventListener('mouseleave', () =>{
+    const esconder = () => {
         overley.style.opacity = 1;
         projetoDescricao.style.opacity = 0;
         projetoDescricao.style.display = 'none';
-    })
-    
-})
+    };
+
+    // Desktop
+    projeto.addEventListener('mouseenter', mostrar);
+    projeto.addEventListener('mouseleave', esconder);
+
+    // Mobile
+    projeto.addEventListener('touchstart', e => {
+        // impede clique duplo estranho
+        e.stopPropagation();
+        if (projetoDescricao.style.display === 'flex') {
+            esconder();
+        } else {
+            mostrar();
+        }
+    });
+
+    // Fecha se tocar fora
+    document.addEventListener('touchstart', e => {
+        if (!projeto.contains(e.target)) {
+            esconder();
+        }
+    });
+});
