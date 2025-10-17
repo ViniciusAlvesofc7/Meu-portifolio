@@ -83,41 +83,21 @@ items.reverse().forEach(item => container.appendChild(item));
 
 
 // Ativa e desativa o overley em animação
-// document.querySelectorAll('.projeto-single').forEach( projeto =>{
-//     const overley = projeto.querySelector('.projeto-overley');
-//     const projetoDescricao = projeto.querySelector('.projeto-descricao');
+document.querySelectorAll('.projeto-single').forEach( projeto =>{
+    const overley = projeto.querySelector('.projeto-overley');
+    const projetoDescricao = projeto.querySelector('.projeto-descricao');
 
 
-//     projeto.addEventListener('mouseenter', () =>{
-//         overley.style.opacity = 0;
-//         projetoDescricao.style.opacity = 1;
-//         projetoDescricao.style.display = 'flex';
-//     })
+    projeto.addEventListener('mouseenter', () =>{
+        overley.style.opacity = 0;
+        projetoDescricao.style.opacity = 1;
+        projetoDescricao.style.display = 'flex';
+    })
 
-//     projeto.addEventListener('mouseleave', () =>{
-//         overley.style.opacity = 1;
-//         projetoDescricao.style.opacity = 0;
-//         projetoDescricao.style.display = 'none';
-//     })
+    projeto.addEventListener('mouseleave', () =>{
+        overley.style.opacity = 1;
+        projetoDescricao.style.opacity = 0;
+        projetoDescricao.style.display = 'none';
+    })
     
-// })
-
-document.querySelectorAll('.projeto-single').forEach(projeto => {
-    const botao = projeto.querySelector('a');
-    const descricao = projeto.querySelector('.projeto-descricao');
-
-    projeto.addEventListener('click', e => {
-        // Evita que o link feche a descrição
-        if (botao.contains(e.target)) return;
-
-        // Alterna o estado
-        projeto.classList.toggle('ativo');
-    });
-
-    // Fecha descrição se clicar fora
-    document.addEventListener('click', e => {
-        if (!projeto.contains(e.target)) {
-            projeto.classList.remove('ativo');
-        }
-    });
-});
+})

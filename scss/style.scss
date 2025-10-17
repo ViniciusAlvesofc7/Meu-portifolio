@@ -530,7 +530,6 @@ main {
 
                 .projeto-icons {
                     z-index: 1;
-                    pointer-events: auto;
 
                     i {
                         color: $cor-destaque-inverso;
@@ -544,16 +543,14 @@ main {
 
                 .projeto-descricao {
                     opacity: 0;
-                    display: flex;
-                    pointer-events: none;
+                    display: none;
                     position: relative;
                     transition: opacity 0.6s, display 0.6s;
                     justify-content: space-between;
                     align-items: center;
                     padding: 20px 10px;
                     background-color: $cor-elementos;
-                    border-radius: 0 0 20px 20px; 
-                    z-index: 2;
+                    border-radius: 0 0 20px 20px;
 
                     h3 {
                         color: $cor-texto;
@@ -562,6 +559,10 @@ main {
 
                     a{
                         text-decoration: none;
+                    }
+
+                    button {
+                        all: unset;
                         padding: 10px 15px;
                         border-radius: 20px;
                         background-color: $cor-principal-escura;
@@ -569,28 +570,11 @@ main {
                         border: 2px solid $cor-destaque-inverso;
                         transition: 0.6s;
                         cursor: pointer;
-                        display: inline-block;
-                        z-index: 3;
 
-                        &:hover,
-                        &:focus,
-                        &:active {
+                        &:hover {
                             transform: scale(1.1);
                             background-color: $cor-destaque-inverso;
                             text-shadow: 1px 1px 1px $cor-destaque-escura;
-                        }
-                    }
-                }
-
-                &.ativo,
-                    &:hover,
-                    &:focus-within {
-                        .projeto-overley {
-                            opacity: 0;
-                        }
-                        .projeto-descricao {
-                            opacity: 1;
-                            pointer-events: auto; // volta a interagir quando visível
                         }
                     }
                 }
@@ -669,7 +653,7 @@ main {
             }
         }
     }
-
+}
 
 @media screen and (min-width: 767px) {
     section#ficha {

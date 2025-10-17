@@ -542,7 +542,6 @@ main section#projetos #projeto-group .projeto-single p {
 }
 main section#projetos #projeto-group .projeto-single .projeto-icons {
   z-index: 1;
-  pointer-events: auto;
 }
 main section#projetos #projeto-group .projeto-single .projeto-icons i {
   color: #348E91;
@@ -553,8 +552,7 @@ main section#projetos #projeto-group .projeto-single:hover {
 }
 main section#projetos #projeto-group .projeto-single .projeto-descricao {
   opacity: 0;
-  display: flex;
-  pointer-events: none;
+  display: none;
   position: relative;
   transition: opacity 0.6s, display 0.6s;
   justify-content: space-between;
@@ -562,7 +560,6 @@ main section#projetos #projeto-group .projeto-single .projeto-descricao {
   padding: 20px 10px;
   background-color: #111717;
   border-radius: 0 0 20px 20px;
-  z-index: 2;
 }
 main section#projetos #projeto-group .projeto-single .projeto-descricao h3 {
   color: #FFFFFF;
@@ -570,6 +567,9 @@ main section#projetos #projeto-group .projeto-single .projeto-descricao h3 {
 }
 main section#projetos #projeto-group .projeto-single .projeto-descricao a {
   text-decoration: none;
+}
+main section#projetos #projeto-group .projeto-single .projeto-descricao button {
+  all: unset;
   padding: 10px 15px;
   border-radius: 20px;
   background-color: #0A0C0D;
@@ -577,23 +577,13 @@ main section#projetos #projeto-group .projeto-single .projeto-descricao a {
   border: 2px solid #348E91;
   transition: 0.6s;
   cursor: pointer;
-  display: inline-block;
-  z-index: 3;
 }
-main section#projetos #projeto-group .projeto-single .projeto-descricao a:hover, main section#projetos #projeto-group .projeto-single .projeto-descricao a:focus, main section#projetos #projeto-group .projeto-single .projeto-descricao a:active {
+main section#projetos #projeto-group .projeto-single .projeto-descricao button:hover {
   transform: scale(1.1);
   background-color: #348E91;
   text-shadow: 1px 1px 1px #213635;
 }
-main section#projetos #projeto-group .projeto-single.ativo .projeto-overley, main section#projetos #projeto-group .projeto-single:hover .projeto-overley, main section#projetos #projeto-group .projeto-single:focus-within .projeto-overley {
-  opacity: 0;
-}
-main section#projetos #projeto-group .projeto-single.ativo .projeto-descricao, main section#projetos #projeto-group .projeto-single:hover .projeto-descricao, main section#projetos #projeto-group .projeto-single:focus-within .projeto-descricao {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-section#contato {
+main section#contato {
   grid-column: 2;
   display: flex;
   flex-direction: column;
@@ -601,7 +591,7 @@ section#contato {
   padding-top: 200px;
   padding-bottom: 200px;
 }
-section#contato h2 {
+main section#contato h2 {
   color: #FFFFFF;
   text-align: center;
   margin: auto;
@@ -610,16 +600,16 @@ section#contato h2 {
   border-bottom: 2px solid #348E91;
   margin-bottom: 50px;
 }
-section#contato #contato-group {
+main section#contato #contato-group {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
-section#contato #contato-group a {
+main section#contato #contato-group a {
   text-decoration: none;
 }
-section#contato #contato-group .contato-single {
+main section#contato #contato-group .contato-single {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -627,7 +617,7 @@ section#contato #contato-group .contato-single {
   color: #FFFFFF;
   transition: 0.4s;
 }
-section#contato #contato-group .contato-single .contato-icon {
+main section#contato #contato-group .contato-single .contato-icon {
   background-color: #213635;
   width: 50px;
   height: 50px;
@@ -637,21 +627,21 @@ section#contato #contato-group .contato-single .contato-icon {
   border-radius: 50%;
   margin-bottom: 0.8em;
 }
-section#contato #contato-group .contato-single .contato-icon i {
+main section#contato #contato-group .contato-single .contato-icon i {
   color: #348E91;
   font-size: 1.8em;
 }
-section#contato #contato-group .contato-single h3 {
+main section#contato #contato-group .contato-single h3 {
   font-size: 1em;
   color: #FFFFFF;
   line-height: 1.8em;
 }
-section#contato #contato-group .contato-single p {
+main section#contato #contato-group .contato-single p {
   display: none;
   font-size: 0.8em;
   color: #e7e5e5;
 }
-section#contato #contato-group .contato-single:hover {
+main section#contato #contato-group .contato-single:hover {
   transform: scale(1.2);
 }
 
