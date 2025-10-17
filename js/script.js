@@ -103,45 +103,22 @@ items.reverse().forEach(item => container.appendChild(item));
 // })
 
 document.querySelectorAll('.projeto-single').forEach(projeto => {
-    const overley = projeto.querySelector('.projeto-overley');
-    const projetoDescricao = projeto.querySelector('.projeto-descricao');
-    const botao = projeto.querySelector('a'); // link do "Ver mais"
+    const botao = projeto.querySelector('a'); // link "Ver mais"
 
-    const mostrar = () => {
-        overley.style.opacity = 0;
-        projetoDescricao.style.opacity = 1;
-        projetoDescricao.style.display = 'flex';
-    };
+    const toggleDescricao = () => projeto.classList.toggle('ativo');
+    const fecharDescricao = () => projeto.classList.remove('ativo');
 
-    const esconder = () => {
-        overley.style.opacity = 1;
-        projetoDescricao.style.opacity = 0;
-        projetoDescricao.style.display = 'none';
-    };
-
-    // Desktop
-    projeto.addEventListener('mouseenter', mostrar);
-    projeto.addEventListener('mouseleave', esconder);
-
-    // Mobile: alterna toque
-    projeto.addEventListener('touchstart', e => {
-        e.stopPropagation(); // evita fechar ao tocar no próprio projeto
-        if (projetoDescricao.style.display === 'flex') {
-            esconder();
-        } else {
-            mostrar();
-        }
+    // Desktop: hover/focus funciona pelo CSS
+    // Mobile: alterna toque no card
+    projeto.addEventListener('click', e => {
+        if (e.target === botao) return; // deixa o link abrir normalmente
+        toggleDescricao();
     });
 
-    // Não fecha se tocar no botão/link
-    if (botao) {
-        botao.addEventListener('touchstart', e => e.stopPropagation());
-    }
-
-    // Fecha se tocar fora de qualquer projeto
-    document.addEventListener('touchstart', e => {
+    // Fecha se clicar fora
+    document.addEventListener('click', e => {
         if (!projeto.contains(e.target)) {
-            esconder();
+            fecharDescricao();
         }
     });
 });
