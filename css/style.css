@@ -459,6 +459,8 @@ main section#skills #skills-group {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   grid-auto-rows: auto;
   margin-bottom: 50px;
+  align-items: center;
+  justify-items: center;
 }
 main section#skills #skills-group .skill-icon {
   padding: 10px 0;
